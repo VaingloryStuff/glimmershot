@@ -20,6 +20,9 @@
   <section class="hero is-primary is-fullheight header-image">
     <div class="hero-body">
       <div class="container has-text-centered">
+      <h1 class="title">
+        Glimmershot
+      </h1>
         <div class="column is-6 is-offset-3">
           <div class="field has-addons">
               <div class="control is-expanded">
