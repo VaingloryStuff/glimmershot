@@ -46,81 +46,65 @@
             </div>
         </div>
     </div>
-<!--         <h1 class="title is-2">
-          Hero Heading
-        </h1>
-        <h2 class="subtitle is-5">
-          A hero description could go here.
-        </h2>
-        <p>
-          <a class="button is-outlined">
-            <span class="icon">
-              <i class="fa fa-download"></i> 
-            </span>
-            <span>
-              Download
-            </span>
-          </a>
-        </p> -->
-      </div>
-    </div>
-  </section>
-  <div class="hero-cta">
+</div>
+</div>
+</section>
+<div class="hero-cta">
     <nav class="level">
       <div class="level-item has-text-centered">
         <p class="title">Do something. <a class="button is-primary"><span class="icon"><i class="fa fa-download"></i></span><span>Intent</span></a></p>
-      </div>
-    </nav>
-  </div>
-  <div class="section main">
+    </div>
+</nav>
+</div>
+<div class="section main">
     <div class="container">
       <div class="columns">
         <div class="column is-4">
           <div class="panel">
             <div class="panel-block section">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
-            </div>
           </div>
-        </div>
-        <div class="column is-4">
-          <div class="panel">
-            <div class="panel-block section">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
-            </div>
-          </div>
-
-        </div>
-        <div class="column is-4">
-          <div class="panel">
-            <div class="panel-block section">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
-            </div>
-          </div>
-
-        </div>
       </div>
-    </div>
   </div>
-  <footer class="footer">
+  <div class="column is-4">
+      <div class="panel">
+        <div class="panel-block section">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
+      </div>
+  </div>
+
+</div>
+<div class="column is-4">
+  <div class="panel">
+    <div class="panel-block section">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <p>
           <strong>Glimmershot</strong> by <a href="http://github.com/agangofkittens">agangofkittens</a>. The source code is licensed under
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-        </p>
-        <p>
+      </p>
+      <p>
           <i>Glimmershot is not affiliated, endorsed, sponsored or approved by Super Evil Megacorp and its affiliates.</i>
-        </p>
-        <p>
+      </p>
+      <p>
           <a class="icon" href="https://github.com/jgthms/bulma">
             <i class="fa fa-github"></i>
-          </a>
-        </p>
-      </div>
-    </div>
-  </footer>
-    <!-- Scripts -->
-    <script src="{{ mix('/js/app.js') }}"></script>
+        </a>
+    </p>
+</div>
+</div>
+</footer>
+{{--     <!-- Scripts -->
+    <script src="{{ mix('/js/mix.js') }}"></script> --}}
 
 </body>
 </html>
