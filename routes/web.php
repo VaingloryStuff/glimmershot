@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// player page
+Route::get('/player/{region}/{player_name}', 'BaseController@index')->name('player');
