@@ -51,7 +51,6 @@
                   <span class="icon">
                     <i class="fa fa-search"></i>
                   </span>
-                  <span>Search</span>
                 </a>
               </div>
             </div>
