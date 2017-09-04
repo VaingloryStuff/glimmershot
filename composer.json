@@ -4,13 +4,22 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/agangofkittens/laravel-chartjs"
+        }
+    ],
     "require": {
         "php": ">=7.0.0",
         "agangofkittens/vgwrap": "^1.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.5.1"
+        "laravelcollective/html": "^5.5.1",
+        "fx3costa/laravelchartjs": "dev-master"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

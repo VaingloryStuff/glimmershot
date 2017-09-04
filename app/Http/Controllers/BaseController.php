@@ -28,9 +28,26 @@ class BaseController extends Controller
      */
     public function index($region, $player_name)
     {
-        $player = $this->getPlayerService->search($region, $player_name);
+    	$player = $this->getPlayerService->search($region, $player_name);
 
-        return view('player', ['player' => $player]);
+    	$ranked_chart = app()->chartjs
+        ->name('Ranked')
+        ->type('doughnut')
+        ->size(['width' => 350, 'height' => 200])
+        ->labels(['Wins', 'Losses'])
+        ->datasets([
+            [
+                'backgroundColor' => ['#23d160', '#ff3860'],
+                'hoverBackgroundColor' => ['#23d160', '#ff3860'],
+                'data' => [
+                	$player['currentSeries']['1']['wins'], 
+                	$player['currentSeries']['1']['played'] - $player['currentSeries']['1']['wins'],
+                	]
+            ]
+        ])
+        ->options([]);
+
+        return view('player', compact('player', 'ranked_chart'));
     }
 
      /**

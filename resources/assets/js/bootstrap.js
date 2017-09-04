@@ -7,13 +7,15 @@
  * code may be modified to fit the specific needs of your application.
  */
 
-// try {
-//     window.$ = window.jQuery = require('jquery'); // JQuery
+try {
 
-//     window.Popper = require('popper.js'); // popper.js
+    // window.$ = window.jQuery = require('jquery'); // JQuery
 
-//     require('bootstrap'); // bootstrap 4
-// } catch (e) {}
+    // window.Popper = require('popper.js'); // popper.js
+
+    // require('bootstrap'); // bootstrap 4
+	// require('chart.js')
+} catch (e) {}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
