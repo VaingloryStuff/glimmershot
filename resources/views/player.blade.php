@@ -50,20 +50,6 @@
             text-transform: uppercase;
         }
 
-        .summoner-name {
-            color: #FFF;
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.5em;
-            text-shadow: 0 0 30px black;
-            z-index: 1;
-            position: relative;
-            text-transform: none;
-            display: inherit;
-            line-height: normal;
-            margin: 0;
-            max-width: none;
-        }
-
         .header-image {
             background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('/images/backgrounds/Kestrel_Winter_War_R.jpg');
             background-position: top center;

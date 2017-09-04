@@ -11,6 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }} {{ app()->version() }}
     </title>
 
+    <!-- Styles -->
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
     <style>
       .header-image {
         background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('/images/backgrounds/Kestrel_Winter_War_R.jpg');
@@ -123,8 +126,6 @@
 
     <noscript id="deferred-styles">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!-- Styles -->
-      <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     </noscript>
     <script>
         var loadDeferredStyles = function() {
