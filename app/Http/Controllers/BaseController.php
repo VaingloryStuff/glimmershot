@@ -66,7 +66,7 @@ class BaseController extends Controller
             ])
             ->options([]);
 
-        return view('player', compact('player', 'ranked_chart', 'casual_chart'));
+        return view('pages.player', compact('player', 'ranked_chart', 'casual_chart'));
     }
 
      /**

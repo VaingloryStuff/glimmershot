@@ -10,7 +10,7 @@
 
     <title>Glimmershot | {{ $player['name'] }}
     </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 
@@ -92,6 +92,10 @@
     {{ $player['picks']['0']['actor'] }}
     {{ $player['picks']['0']['hero_pick'] }}
 </p>
+
+<footer class="footer">
+    @include('includes.footer')
+</footer>
 
 <!-- Scripts -->
 <script src="{{ mix('/js/Chart.min.js') }}">
