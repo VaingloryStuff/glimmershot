@@ -13,7 +13,7 @@
             </i>
         </p>
         <p>
-            <a class="icon" href="https://kitsune.gq/agangofkittens/Glimmershots">
+            <a class="icon" href="https://github.com/agangofkittens/glimmershot">
                 <i class="fa fa-github">
                 </i>
             </a>
