@@ -15,43 +15,8 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 
     <style>
-        .summoner-profile-picture {
-            height: 120px;
-            margin: 20px auto 10px;
-            width: 120px;
-            z-index: 1;
-            position: relative;
-        }
-
-        .summoner-profile-picture img {
-            border-radius: 100%;
-            -webkit-border-radius: 100%;
-            -moz-border-radius: 100%;
-            height: 100%;
-            width: 100%;
-            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
-            -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
-            -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        .summoner-profile-picture .region {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.75);
-            height: 32px;
-            width: 32px;
-            border-radius: 100%;
-            -webkit-border-radius: 100%;
-            -moz-border-radius: 100%;
-            color: #FFF;
-            font-size: 0.75em;
-            line-height: 32px;
-            text-transform: uppercase;
-        }
-
         .header-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('/images/backgrounds/Kestrel_Winter_War_R.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url("{{ asset('/images/backgrounds/Kestrel_Winter_War_R.jpg') }}");
             background-position: top center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -106,6 +71,7 @@
             <div class="column">
 
                 <div class="box">
+                    <h3 class="title has-text-centered">Ranked</h3>
                     {!! $ranked_chart->render() !!}
                 </div>
 
@@ -113,9 +79,8 @@
 
             <div class="column">
                 <div class="box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce orci turpis, blandit in efficitur
-                        sit amet, iaculis in odio. Nullam at iaculis mi, ut mollis enim. Integer egestas massa pretium
-                        arcu semper pharetra. Sed tincidunt sem sed condimentum pellentesque.</p>
+                    <h3 class="title has-text-centered">Casual</h3>
+                    {!! $casual_chart->render() !!}
                 </div>
             </div>
         </div>
@@ -127,10 +92,6 @@
     {{ $player['picks']['0']['actor'] }}
     {{ $player['picks']['0']['hero_pick'] }}
 </p>
-
-<div style="position: relative; height:20vh; width:40vw">
-    {!! $ranked_chart->render() !!}
-</div>
 
 <!-- Scripts -->
 <script src="{{ mix('/js/Chart.min.js') }}">

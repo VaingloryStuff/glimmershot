@@ -16,8 +16,7 @@
 
     <style>
       .header-image {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('/images/backgrounds/Kestrel_Winter_War_R.jpg');
-        background-position: center center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url("{{ asset('/images/backgrounds/Kestrel_Winter_War_R.jpg') }}");        background-position: center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;

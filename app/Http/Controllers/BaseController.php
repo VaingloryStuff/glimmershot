@@ -14,17 +14,19 @@ class BaseController extends Controller
      */
     protected $player;
 
+    /**
+     * BaseController constructor.
+     * @param GetPlayerService $player
+     */
     public function __construct(GetPlayerService $player)
     {
         $this->getPlayerService = $player;
     }
 
     /**
-     * Perform the search in the /player/region/player_name.
-     *
      * @param $region
      * @param $player_name
-     * @return $this
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index($region, $player_name)
     {
@@ -47,7 +49,24 @@ class BaseController extends Controller
         ])
         ->options([]);
 
-        return view('player', compact('player', 'ranked_chart'));
+        $casual_chart = app()->chartjs
+            ->name('Casual')
+            ->type('doughnut')
+            ->size(['width' => 350, 'height' => 200])
+            ->labels(['Wins', 'Losses'])
+            ->datasets([
+                [
+                    'backgroundColor' => ['#23d160', '#ff3860'],
+                    'hoverBackgroundColor' => ['#23d160', '#ff3860'],
+                    'data' => [
+                        $player['currentSeries']['0']['wins'],
+                        $player['currentSeries']['0']['played'] - $player['currentSeries']['0']['wins'],
+                    ]
+                ]
+            ])
+            ->options([]);
+
+        return view('player', compact('player', 'ranked_chart', 'casual_chart'));
     }
 
      /**
