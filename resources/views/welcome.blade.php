@@ -10,9 +10,17 @@
 
     <title>{{ config('app.name', 'Laravel') }} {{ app()->version() }}
     </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Styles -->
-    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
+    <style>
+      .header-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('/images/backgrounds/Kestrel_Winter_War_R.jpg');
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+    </style>
 
   </head>
   <body>
@@ -112,7 +120,27 @@
         </div>
       </div>
     </footer>
-    
+
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Styles -->
+      <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+    </noscript>
+    <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+
     {{--     
     <!-- Scripts -->
     <script src="{{ mix('/js/mix.js') }}">
