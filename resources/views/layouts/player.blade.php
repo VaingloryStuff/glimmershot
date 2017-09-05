@@ -7,6 +7,8 @@
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 
+    <script src="https://use.fontawesome.com/8b18c79530.js"></script>
+
     <style>
         .header-image {
             background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url("{{ asset('/images/backgrounds/Kestrel_Winter_War_R.jpg') }}");
