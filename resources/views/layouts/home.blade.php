@@ -45,7 +45,5 @@
     @include('includes.footer')
 </footer>
 
-@include('includes.defer')
-
 </body>
 </html>
