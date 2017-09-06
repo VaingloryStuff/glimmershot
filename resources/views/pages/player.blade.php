@@ -1,5 +1,9 @@
 @extends('layouts.player')
 
+@section('title')
+{{ $player['name'] }}
+@stop
+
 @section('header')
     <div class="column is-half is-offset-one-quarter">
         <div class="summoner-profile-picture">

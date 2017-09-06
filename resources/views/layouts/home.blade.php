@@ -2,6 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     @include('includes.meta')
+
     <title>Glimmershot</title>
 
     <!-- Styles -->
