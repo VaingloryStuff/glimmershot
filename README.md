@@ -7,7 +7,6 @@
 [![StyleCI](https://styleci.io/repos/102589801/shield)](https://styleci.io/repos/102589801/)
 [![Uptime Robot status](https://img.shields.io/uptimerobot/status/m779393809-0f7ae7a128bd1823f37b313d.svg?style=flat-square)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Discord](https://img.shields.io/discord/355092866621636610.svg?style=flat-square)](https://discord.gg/ChrfHHw) 
 
 Glimmershot is a minimalistic Vainglory statistics site that focuses on fast player lookup.
 
