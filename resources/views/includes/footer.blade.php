@@ -5,7 +5,7 @@
             </strong> by
             <a href="http://github.com/agangofkittens">agangofkittens
             </a>. The source code is licensed under
-            <a href="http://opensource.org/licenses/mit-license.php">MIT
+            <a href="https://www.gnu.org/licenses/gpl.html">GPLv3
             </a>.
         </p>
         <p>
