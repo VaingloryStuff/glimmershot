@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use Slim\Views\Twig;
-use Psr\Log\LoggerInterface;
+use GuzzleHttp\Client;
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Slim\Views\Twig;
 
 class PlayerController
 {
@@ -16,11 +16,9 @@ class PlayerController
      * Player Controller constructor.
      *
      * @param Twig $view
-     * @param LoggerInterface $logger
      */
-    public function __construct(Twig $view, LoggerInterface $logger) {
+    public function __construct(Twig $view) {
         $this->view = $view;
-        $this->logger = $logger;
     }
 
     /**
@@ -33,12 +31,24 @@ class PlayerController
      */
     public function show(Request $request, Response $response, array $args)
     {
-        // Sample log message
-        $this->logger->info("Glimmershot '/player' route");
+        $client = new Client();
 
-        $data = ['playerName' => $args['playerName']];
+        // $apiResponse = $client->get(getenv('API_URL') . '/player/' . $args['playerName'], [
+        //     'headers'        => ['Api-Token' => getenv('API_KEY')],
+        // ]);
+
+        // This part is here temporary for debugging purposes..
+
+        $apiResponse = $client->get(getenv('API_URL') . '/player/' . $args['playerName']);
+        $body = json_decode($apiResponse->getBody(), TRUE);
+
+        foreach($body['picks'] as &$value) {
+            $value['actor'] = str_replace('*', '', $value['actor']);
+          }
 
         // Render index view
-        $this->view->render($response, 'player.twig', $data);
+        $this->view->render($response, 'player.twig', [
+            'player' => $body
+        ]);
     }
 }
