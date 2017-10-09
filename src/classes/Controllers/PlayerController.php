@@ -17,16 +17,18 @@ class PlayerController
      *
      * @param Twig $view
      */
-    public function __construct(Twig $view) {
+    public function __construct(Twig $view)
+    {
         $this->view = $view;
     }
 
     /**
      * The player show function.
      *
-     * @param Request $request
+     * @param Request  $request
      * @param Response $response
-     * @param array $args
+     * @param array    $args
+     *
      * @return void
      */
     public function show(Request $request, Response $response, array $args)
@@ -39,16 +41,16 @@ class PlayerController
 
         // This part is here temporary for debugging purposes..
 
-        $apiResponse = $client->get(getenv('API_URL') . '/player/' . $args['playerName']);
-        $body = json_decode($apiResponse->getBody(), TRUE);
+        $apiResponse = $client->get(getenv('API_URL').'/player/'.$args['playerName']);
+        $body = json_decode($apiResponse->getBody(), true);
 
-        foreach($body['picks'] as &$value) {
+        foreach ($body['picks'] as &$value) {
             $value['actor'] = str_replace('*', '', $value['actor']);
-          }
+        }
 
         // Render index view
         $this->view->render($response, 'player.twig', [
-            'player' => $body
+            'player' => $body,
         ]);
     }
 }
